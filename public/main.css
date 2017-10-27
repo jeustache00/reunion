@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+}
+
+Body {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card {
+    margin: 2%;
+    width: 90%
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        width: 45%;
+    }
+}
+
+.options {
+    border: solid 1px;
+}
