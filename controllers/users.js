@@ -4,9 +4,6 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const models = require('../models')
 const users = models.Users
-const polls = models.Polls
-const pollOptions = models.PollOptions
-const poll_option_detail = models.Poll_option_detail
 const { mustBeLoggedIn } = require('./utils')
 
 passport.serializeUser(function(user, done){
@@ -78,19 +75,12 @@ router.post('/signup', passport.authenticate('local-signup', { successRedirect: 
 
 router.post('/login', passport.authenticate('local-login', {successRedirect: '/'}))
 
-// to get all the poll this loggedin user created, include all the polls' associated options
-router.get('/polls', (req, res, next) => {
-  polls.findAll({
-    where: {UserId: req.user.id},
-    include: [{model: pollOptions}]
-  })
-    .then(polls => res.json(polls))
-    .catch(next)
-})
+
+//Need to edit to find all listings
 
 // to get all the poll choices this loggedin user had voted, we can join the poll_option_detail
 // table with users table, filter out those user.id === req.user.id
-router.get('/voted', (req, res, next) => {
+/*router.get('/voted', (req, res, next) => {
   mustBeLoggedIn(req, res, next)
 
   poll_option_detail.findAll({
@@ -99,5 +89,6 @@ router.get('/voted', (req, res, next) => {
     .then(voted => res.json(voted))
     .catch(next)
 })
+*/
 
 module.exports = router
