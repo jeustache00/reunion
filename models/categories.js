@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
   Categories.associate = function(models){
-    Categories.belongsToMany(models.Products, {through:'Cat-prod'});  
+    Categories.belongsToMany(models.Products, {through:'Cat-prod'});
   }
   return Categories;
 };

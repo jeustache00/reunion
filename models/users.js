@@ -30,6 +30,11 @@ module.exports = (sequelize, DataTypes) => {
   Users.prototype.authenticate = function(plaintext) {
     return bcrypt.compare(plaintext, this.password_hashed)
   }
+
+  Users.associate = function(models){
+    Users.belongsToMany(models.Products, {through:'User-prod'});
+  }
+
   return Users;
 }
 
