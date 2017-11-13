@@ -76,19 +76,4 @@ router.post('/signup', passport.authenticate('local-signup', { successRedirect: 
 router.post('/login', passport.authenticate('local-login', {successRedirect: '/'}))
 
 
-//Need to edit to find all listings
-
-// to get all the poll choices this loggedin user had voted, we can join the poll_option_detail
-// table with users table, filter out those user.id === req.user.id
-/*router.get('/voted', (req, res, next) => {
-  mustBeLoggedIn(req, res, next)
-
-  poll_option_detail.findAll({
-    include: [{model: users,  where: { id: req.user.id } }]
-  })
-    .then(voted => res.json(voted))
-    .catch(next)
-})
-*/
-
 module.exports = router
