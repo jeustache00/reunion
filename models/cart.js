@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
 
   });
   Carts.associate = function(models){
-    Carts.belongsToMany(models.Products, {through:'Cart-details'});
+    Carts.belongsToMany(models.Products, {through:'CartDetails'});
     Carts.belongsTo(models.Users);
   }
   return Carts;

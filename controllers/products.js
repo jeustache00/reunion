@@ -1,13 +1,12 @@
+//import {mustBeLoggedIn} from './utils.js';
 const express = require('express');
 const models = require('../models');
 const router = express.Router();
 const Products = models.Products;
 const Categories = models.Categories;
 
-//REFERENCE
-//localhost:8000/api/products/?id=1
-//To get all products with id from Categories as query
 router.get('/', (req, res) => {
+  //mustBeLoggedIn(req,res,next)
   Products.findAll({
     include: [{
       model: Categories,
@@ -18,7 +17,8 @@ router.get('/', (req, res) => {
   )
 })
 
-router.post('/', (req, res) =>{
+router.post('/', (req, res, next) =>{
+  //mustBeLoggedIn(req,res,next)
   Products.create({
     name: req.body.name,
     cost: req.body.cost,
