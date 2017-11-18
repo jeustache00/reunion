@@ -1,12 +1,12 @@
-//import {mustBeLoggedIn} from './utils.js';
+const { mustBeLoggedIn } = require('./utils');
 const express = require('express');
 const models = require('../models');
 const router = express.Router();
 const Products = models.Products;
 const Categories = models.Categories;
 
-router.get('/', (req, res) => {
-  //mustBeLoggedIn(req,res,next)
+router.get('/', (req, res, next) => {
+  mustBeLoggedIn(req, res, next)
   Products.findAll({
     include: [{
       model: Categories,
@@ -16,6 +16,11 @@ router.get('/', (req, res) => {
     res.json(products)
   )
 })
+/*EX: To find all products of a certain categoryIds
+  localhost:8000/api/products/?id=11
+
+*/
+
 
 router.post('/', (req, res, next) =>{
   //mustBeLoggedIn(req,res,next)

@@ -17,4 +17,7 @@ const selfOnly = action => (req, res, next) => {
 }
 
 // Feel free to add more filters here (suggested: something that keeps out non-admins)
-module.exports = { mustBeLoggedIn, selfOnly }
+module.exports = {
+  mustBeLoggedIn,
+   selfOnly
+}

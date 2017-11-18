@@ -68,6 +68,7 @@ passport.use('local-login', new LocalStrategy({
         })
         .catch(done)
     })
+    console.log(email + " logged in")
   }
 ))
 

@@ -17,17 +17,6 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use(passport.initialize())
 app.use(passport.session())
 
-// Uncomment the following if you want to use handlebars
-// on the backend. (You must create the views folder)
-/*
-const exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({
-  layoutsDir: './views/layouts',
-  defaultLayout: 'main',
-}));
-app.set('view engine', 'handlebars');
-app.set('views', `${__dirname}/views/`);
-*/
 
 // Load up all of the controllers
 const controllers = require('./controllers')
