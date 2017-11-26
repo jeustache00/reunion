@@ -32,7 +32,8 @@ passport.use('local-signup', new LocalStrategy({
           } else {
             return users.create({
               email: email,
-              password: password
+              password: password,
+              isAdmin: req.body.isAdmin
             })
           }
         })

@@ -4,7 +4,7 @@ const router = express.Router();
 const Categories = models.Categories;
 const Products = models.Categories;
 const CartDetail = models.CartDetails;
-
+const CatProds = models.CatProds;
 
 router.post('/', (req,res) =>{
   //mustBeLoggedIn(req,res,next)
@@ -21,18 +21,26 @@ router.post('/', (req,res) =>{
 
 
 
-/* Used to get a list of products based on a category
+// Used to get a list of products based on a category
 
 router.get('/:id', (req, res) => {
-  Cat-prod.findAll({
-
+  CatProds.findAll({
+    where: {
+      CategoryId: req.params.id
+    },
+    include:{
+      model: Categories,
+      where: {
+        id: req.params.id
+      }
+    }
   })
   .then(products =>
     res.json(products)
   )
 })
 
-*/
+
 
 module.exports = router
 

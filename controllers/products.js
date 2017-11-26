@@ -6,7 +6,7 @@ const Products = models.Products;
 const Categories = models.Categories;
 
 router.get('/', (req, res, next) => {
-  mustBeLoggedIn(req, res, next)
+  //mustBeLoggedIn(req, res, next)
   Products.findAll({
     include: [{
       model: Categories,
