@@ -53,8 +53,9 @@ const Navigation = (props) => {
 	      <div className="container">
 	        <div className="collapse navbar-collapse navbar-ex1-collapse">
 	          <ul className="nav navbar-nav">
-	            <li><a className="home_link" title="Home" href="index.html">Home</a></li>
+	            <li><Link className="home_link" title="Home" to="/">Home</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Women</Link></li>
+	            <li className="mega-menu dropdown"><Link to="/category">Category</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/polls">Polls</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Clothing</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Shoes</Link></li>
