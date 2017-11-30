@@ -41,4 +41,28 @@ router.post('/', (req, res, next) =>{
   })
 })
 
+/*UPDATE QUANTITY
+If user makes a purchase, decrement quantity in
+stock by how much is in user cart
+Need to find user cart, and update all in stock QUANTITY
+after transaction is complete
+
+router.put('/', (req, res, next) =>{
+  Product.update(
+    //SUBTRACT USER QUANTITY OF PRODUCT
+    {quantity: {user}}
+    {where: {id: req.body.prodID}}
+  )
+  .then(result =>
+    handleResult(result)
+  )
+  .catch(err =>
+    handleError(err)
+  )
+
+})
+
+*/
+
+
 module.exports = router

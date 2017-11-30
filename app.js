@@ -21,6 +21,9 @@ app.use(passport.session())
 // Load up all of the controllers
 const controllers = require('./controllers')
 app.use('/api', controllers)
+app.get('*',(req, res) =>{
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 
 // First, make sure the Database tables and models are in sync
 // then, start up the server and start listening.
