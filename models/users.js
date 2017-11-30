@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
-      notEmpty: true
+      notEmpty: true,
+      defaultValue: false
     },
     password_hashed: DataTypes.STRING,// This column stores the hashed password in the DB, via the beforeCreate/beforeUpdate hooks
     password: DataTypes.VIRTUAL, // Note that this is a virtual, and not actually stored in DB
@@ -27,12 +28,12 @@ module.exports = (sequelize, DataTypes) => {
 
 
   // This method is a Promisified bcrypt.compare
-  Users.prototype.authenticate = function(plaintext) {
-    return bcrypt.compare(plaintext, this.password_hashed)
+  Users.prototype.authenticate = function(userInputPass) {
+    return bcrypt.compare(userInputPass, this.password_hashed)
   }
 
   Users.associate = function(models){
-    Users.belongsToMany(models.Products, {through:'User-prod'});
+    Users.belongsToMany(models.Products, {through:'UserProd'});
   }
 
   return Users;

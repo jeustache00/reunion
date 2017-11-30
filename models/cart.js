@@ -1,10 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Cart = sequelize.define('Cart', {
-    userid: DataTypes.INTEGER
+  var Carts = sequelize.define('Carts', {
+
   });
-  Cart.associate = function(models){
-    Cart.belongsToMany(models.Products, {through:'User-prod'});
+  Carts.associate = function(models){
+    Carts.belongsToMany(models.Products, {through:'CartDetails'});
+    Carts.belongsTo(models.Users);
   }
-  return Cart;
+  return Carts;
 };
