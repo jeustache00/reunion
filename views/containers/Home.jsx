@@ -1,13 +1,17 @@
 import React from 'react'
+import Options from '../components/Options'
+import Banners from '../components/Banners'
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
+    
     return (
-      <div>
-        <h1>this is Home Component</h1>
+      <div className="container">
+        <Options />
+        <Banners />
       </div>
     )
   }
