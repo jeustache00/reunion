@@ -55,7 +55,7 @@ const Navigation = (props) => {
 	          <ul className="nav navbar-nav">
 	            <li><a className="home_link" title="Home" href="index.html">Home</a></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Women</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/polls">Polls</Link></li>
+	            <li className="mega-menu dropdown"><Link to="/products">All Products</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Clothing</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product">Shoes</Link></li>
 	            <li className="mega-menu dropdown"><Link to="/product2">Test</Link></li>
