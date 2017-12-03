@@ -7,6 +7,7 @@ import Polls from '../containers/Polls'
 import Product from '../containers/Product'
 import Product2 from '../containers/Product2'
 import Cart from '../containers/Cart'
+import Category from '../containers/Category'
 
 const App = () => (
   <div className="wrapper-wide">
@@ -18,7 +19,8 @@ const App = () => (
         <Route path="/polls" component={Polls} />
         <Route path="/product" component={Product} /> 
         <Route path="/cart" component={Cart} /> 
-        <Route path="/product2" component={Product2} /> 
+        <Route path="/product2" component={Product2} />
+        <Route path="/category" component={Category} />  
       </Switch>
     </main>
 
