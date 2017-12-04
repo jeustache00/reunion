@@ -19,6 +19,13 @@ router.post('/', (req,res) =>{
   )
 })
 
+router.get('/', (req,res) =>{
+  Categories.findAll()
+    .then((allCategories) => res.json(allCategories))
+     .catch(
+        console.error
+      )
+})
 
 
 // Used to get a list of products based on a category

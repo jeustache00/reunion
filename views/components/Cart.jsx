@@ -11,7 +11,9 @@ const Cart = (props) => {
                   <tr>
                     <td className="text-center">Image</td>
                     <td className="text-left">Product Name</td>
-                    <td className="text-left">Model</td>
+                    <td className="text-left">Product Size</td>
+                    <td className="text-left">Product Color</td>
+                    <td className="text-left">Order Type</td>
                     <td className="text-left">Quantity</td>
                     <td className="text-right">Unit Price</td>
                     <td className="text-right">Total</td>
@@ -21,7 +23,9 @@ const Cart = (props) => {
                   <tr>
                     <td className="text-center"><a href="product.html"><img src="image/product/bestseller1.jpg" alt="Brand Fashion Cotton T-Shirt" title="Brand Fashion Cotton T-Shirt" className="img-thumbnail" /></a></td>
                     <td className="text-left"><a href="product.html">Brand Fashion Cotton T-Shirt</a></td>
-                    <td className="text-left">#98KHD872J</td>
+                    <td className="text-left">Medium</td>
+                    <td className="text-left">Black</td>
+                    <td className="text-left">Rent</td>
                     <td className="text-left"><div className="input-group btn-block quantity">
                         <input type="text" name="quantity" value="1" size="1" className="form-control" />
                         <span className="input-group-btn">
@@ -34,7 +38,9 @@ const Cart = (props) => {
                   <tr>
                     <td className="text-center"><a href="product.html"><img src="image/product/bestseller2.jpg" alt="Thigh High Boots" title="Thigh High Boots" className="img-thumbnail" /></a></td>
                     <td className="text-left"><a href="product.html">Thigh High Boots</a></td>
-                    <td className="text-left">#7Y2HBHJ89</td>
+                    <td className="text-left">One Size</td>
+                    <td className="text-left">Black</td>
+                    <td className="text-left">Try</td>
                     <td className="text-left"><div className="input-group btn-block quantity">
                         <input type="text" name="quantity" value="1" size="1" className="form-control" />
                         <span className="input-group-btn">

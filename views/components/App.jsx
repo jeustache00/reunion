@@ -5,9 +5,9 @@ import Navigation from './Navbar'
 import Footer from './Footer'
 import Polls from '../containers/Polls'
 import Product from '../containers/Product'
-import Product2 from '../containers/Product2'
 import Cart from '../containers/Cart'
 import Products from '../containers/Products'
+import Category from '../containers/Category'
 
 const App = () => (
   <div className="wrapper-wide">
@@ -19,8 +19,6 @@ const App = () => (
         <Route path="/polls" component={Polls} />
         <Route path="/product" component={Product} /> 
         <Route path="/cart" component={Cart} /> 
-        <Route path="/product2" component={Product2} /> 
-         <Route path="/products" component={Products} /> 
       </Switch>
     </main>
 
