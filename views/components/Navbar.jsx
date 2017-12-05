@@ -1,7 +1,26 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
-const Navigation = (props) => {
+export default class Navigation extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      categories: []
+    }
+  }
+
+  componentDidMount(){
+    axios.get('/api/categories')
+      .then((res) => {
+      	console.log(res.data)
+        this.setState({categories: res.data})
+      })
+  }
+
+
+
+ render() {
   return (
       <div id="header" className="style2">
 	    <nav id="top" className="htop">
@@ -53,13 +72,19 @@ const Navigation = (props) => {
 	      <div className="container">
 	        <div className="collapse navbar-collapse navbar-ex1-collapse">
 	          <ul className="nav navbar-nav">
+
 	            <li><Link className="home_link" title="Home" to="/">Home</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/product">Women</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/category">Category</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/polls">Polls</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/product">Clothing</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/product">Shoes</Link></li>
-	            <li className="mega-menu dropdown"><Link to="/product2">Test</Link></li>
+	            { 
+			       this.state.categories.map(category => {
+			       	return (<li className="mega-menu dropdown" key={category.id}>
+			       		<Link to={{
+			       			pathname: '/products', 
+			       			state: {catId: category.id}
+			       		}} >{category.type}</Link>
+			       		</li>)
+			       })
+		  	    }
+		  	    
 	            <li className="mega-menu dropdown"><Link to="/cart">CART</Link></li>
 	          </ul>
 	        </div>
@@ -67,7 +92,6 @@ const Navigation = (props) => {
 	    </nav>
 
 	  </div>
-  )
+    )
+  }
 }
-
-module.exports = Navigation
