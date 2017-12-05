@@ -9,13 +9,12 @@ const CartDetails = models.CartDetails;
 
 
 router.get('/', (req, res) => {
-  Carts.findOne({
+  return Carts.findOne({
     where: {
       UserId: req.body.UserId
     },
-    include:{
-      model: Users
-    }
+    include:
+      [{model: Users}, {model: Products}]
   })
   .then(products =>
     res.json(products)
@@ -38,9 +37,6 @@ router.post('/', (req,res,next) => {
       })
     }
   )
-  .then(cartDetail =>{
-    console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXX", cartDetail)
-  })
   // .then(([cartDetail, isCreated]) => {
   //   console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^", cartDetail, isCreated, req.body.quantity)
   //   if(isCreated){
