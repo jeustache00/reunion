@@ -1,50 +1,40 @@
 import React from 'react'
 import axios from 'axios'
 import Options from '../components/Options'
+import Card from '../components/Card'
 
 export default class Products extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: null
+      products: [],
+      catId: this.props.location.state.catId
     }
   }
 
-  //We get the data first before entering the route
-  ComponentWillMount(){
-    console.log('testing will')
-    axios.get('/api/products?id=1')
+  componentDidMount(){
+    axios.get(`/api/products/?id=${this.state.catId}`)
       .then((res) => {
-          console.log(res.data)
         this.setState({products: res.data})
       })
   }
 
-  ComponentDidMount(){
-    console.log('testing did')
-    axios.get('/api/products/?id=1')
-      .then((res) => {
-          console.log(res.data)
-        this.setState({products: res.data})
-      })
+  componentWillReceiveProps(nextProps) {
+  	if (this.props.location.state.catId !== nextProps.location.state.catId) {
+  		this.setState({catId: nextProps.location.state.catId})	
+  	}
   }
+  
 
   render() {
-    console.log("---",this.state)
     return (
       <div className="container">
         <Options />
-
-        <h1>Products page</h1>
-          
-          {this.state.products && this.state.products.map(product => {
-            return (<div> 
-              <h1>{product.name}</h1>
-              <h3>{product.price}</h3>
-              <h3>{product.quantity}</h3>
-              <br/>
-            </div>)
-          })}
+        {
+        	this.state.products.map((product) => {
+        		return (<Card product={product} />)
+        	})
+        }
 
       </div>
       

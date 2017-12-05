@@ -18,6 +18,8 @@ export default class Navigation extends React.Component {
       })
   }
 
+
+
  render() {
   return (
       <div id="header" className="style2">
@@ -74,7 +76,12 @@ export default class Navigation extends React.Component {
 	            <li><Link className="home_link" title="Home" to="/">Home</Link></li>
 	            { 
 			       this.state.categories.map(category => {
-			       	return (<li className="mega-menu dropdown" key={category.id}><Link to="/">{category.type}</Link></li>)
+			       	return (<li className="mega-menu dropdown" key={category.id}>
+			       		<Link to={{
+			       			pathname: '/products', 
+			       			state: {catId: category.id}
+			       		}} >{category.type}</Link>
+			       		</li>)
 			       })
 		  	    }
 		  	    
