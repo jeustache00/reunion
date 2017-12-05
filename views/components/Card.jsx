@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
         <div>
           <h2>{product.name}</h2>
-          <p>{product.price}</p>
+          <p>{product.cost}</p>
           <p>{product.quantity} available </p>
 
             <div className="w3-section">
