@@ -21,7 +21,12 @@ export default class Products extends React.Component {
 
   componentWillReceiveProps(nextProps) {
   	if (this.props.location.state.catId !== nextProps.location.state.catId) {
-  		this.setState({catId: nextProps.location.state.catId})	
+  		// call api with new cat Id 
+      // set new products to state
+      axios.get(`/api/products/?id=${nextProps.location.state.catId}`)
+      .then((res) => {
+        this.setState({products: res.data})
+      })
   	}
   }
   
