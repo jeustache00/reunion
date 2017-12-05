@@ -2,9 +2,22 @@
   "development": {
     "username": "admin",
     "password": "pass",
-    "database": "poll-development",
+    "database": "t2b_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "pass",
+    "database": "tb2_test",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "pass",
+    "database": "t2b_prod",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   }
-  
 }
