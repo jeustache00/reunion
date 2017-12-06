@@ -26,14 +26,17 @@ router.post('/', (req, res, next) =>{
   Products.create({
     name: req.body.name,
     cost: req.body.cost,
-    quantity: req.body.quantity
+    quantity: req.body.quantity,
+    url: req.body.url,
+    UserId: req.body.UserId
   }).then((prod) => {
     //for reference
     //prod.addCategory([1,2])
 
     //frontend needs to send an array object for categoryIds
     //to add in postman
-    //categories[0]
+    //categories[0] | 1
+    //categoreis[1] | 2
     prod.addCategory(req.body.categories)
     res.json(prod);
   })

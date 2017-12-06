@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER,
     cost: DataTypes.FLOAT,
     url: DataTypes.STRING,
-    UserID: {
+    UserId: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null
