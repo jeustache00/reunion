@@ -12,20 +12,38 @@ var updateTotal = function(req, res, next){
   products.Products
 }
 
-
-router.get('/', (req, res, next) => {
-  //GET /api/cart?UserId=1
+router.get('/', (req,res,next) =>{
   return Carts.findOne({
-    where: {
-      UserId: req.query.UserId
-    },
-    include:
-      [{model: Products}, {model: Users}]
+    where: {id: req.query.UserId},
+    include:[{
+      model: Products
+    }]
   })
-  .then(products =>{
-    res.json(products);
-  }).catch()
+  .then(found =>{
+    parseInt(res.json(found));
+    // for(var i=0; i < parseInt(res.json(found.Products.length)); i++){
+    //
+    // }
+  })
+  .then(() =>{
+    res.sendStatus(200)
+  })
+  .catch(function(err){})
 })
+//
+// router.get('/', (req, res, next) => {
+//   //GET /api/cart?UserId=1
+//   return Carts.findOne({
+//     where: {
+//       UserId: req.query.UserId
+//     },
+//     include:
+//       [{model: Products}, {model: Users}]
+//   })
+//   .then(products =>{
+//     res.json(products);
+//   }).catch()
+// })
 
 
 /*
@@ -39,9 +57,9 @@ quantity: -2
  const userCart = function(req,res,next){
    return Carts.findOne({
      where:{UserId: req.query.UserId},
-     include:{
+     include: {
        model: Products,
-       where:{id: req.body.ProductId},
+       attributes: ['cost']
      }
    })
  }
@@ -55,6 +73,10 @@ router.put('/', (req,res,next) => {
         ProductId: req.body.ProductId,
         OptionId: req.body.OptionId,
       }
+      // include: {
+      //   model: Products,
+      //   attributes: ['cost']
+      // }
     })
   })
   .spread((cartDetail, isCreated) => {

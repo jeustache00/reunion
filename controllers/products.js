@@ -11,8 +11,7 @@ router.get('/', (req, res, next) => {
   //mustBeLoggedIn(req, res, next)
   Products.findAll({
     include: [{
-      model: Categories,
-      //where: req.query
+      model: Categories
     }]
   }).then(products =>
     res.json(products)
@@ -49,6 +48,8 @@ router.post('/', (req, res, next) =>{
 
 
 //Delete by Product id in params
+//TODO match Products.UserId to make sure
+//only owner can delete
 router.delete('/:id', (req, res, next) =>{
   Products.destroy({
     where: {id: req.params.id}
