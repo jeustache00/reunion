@@ -18,8 +18,7 @@ router.post('/', (req,res) =>{
   )
 })
 
-<<<<<<< HEAD
-=======
+
 router.get('/', (req,res) =>{
   Categories.findAll()
     .then((allCategories) => res.json(allCategories))
@@ -29,7 +28,7 @@ router.get('/', (req,res) =>{
 })
 
 
->>>>>>> c7457318b718f2b540d1fc459bb3088cb9d54af9
+
 // Used to get a list of products based on a category
 
 router.get('/:id', (req, res) => {
