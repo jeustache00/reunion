@@ -1,5 +1,6 @@
 {
   "development": {
+<<<<<<< HEAD
     "username": "admin",
     "password": "pass",
     "database": "t2b_dev",
@@ -17,6 +18,11 @@
     "username": "admin",
     "password": "pass",
     "database": "t2b_prod",
+=======
+    "username": "ctp_user",
+    "password": "ctp_user",
+    "database": "poll-development",
+>>>>>>> c7457318b718f2b540d1fc459bb3088cb9d54af9
     "host": "127.0.0.1",
     "dialect": "postgresql"
   }
