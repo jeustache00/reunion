@@ -1,0 +1,4 @@
+"id","email","isAdmin","password_hashed","createdAt","updatedAt"
+1,"user1@test.com",FALSE,"$2a$10$MO8R5bTNOpg/9yTzsqx50e1HTSElg23wuWEJl.jtKNBXSgfaPhNTG","2017-12-05 21:49:42.92-05","2017-12-05 21:49:42.92-05"
+2,"user2@test.com",FALSE,"$2a$10$BwHZ8R7qidxcgYl7kyOmQ.AwVG5ap4wWeSP6WZYLPVYAyLOhRSIV6","2017-12-05 21:49:45.926-05","2017-12-05 21:49:45.926-05"
+3,"user3@test.com",FALSE,"$2a$10$8zo9mdPi2MESa4bvJc2f5uZ33vxmxu/dmd1bpeKRx1EaK9V2qmlFi","2017-12-05 21:49:49.253-05","2017-12-05 21:49:49.253-05"
