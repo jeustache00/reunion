@@ -1,24 +1,21 @@
 {
   "development": {
-    "username": "admin",
-    "password": "pass",
-    "database": "t2b_dev",
+    "username": "janizagesmundo",
+    "password": "Baruch52",
+    "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "test": {
-    "username": "admin",
-    "password": "pass",
-    "database": "tb2_test",
+    "username": "janizag",
+    "password": "Baruch52",
+    "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
-    "username": "admin",
-    "password": "pass",
-    "database": "t2b_prod",
-    "username": "ctp_user",
-    "password": "ctp_user",
+    "username": "janizag",
+    "password": "Baruch52",
     "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"

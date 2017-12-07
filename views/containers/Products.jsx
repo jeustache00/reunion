@@ -35,12 +35,13 @@ export default class Products extends React.Component {
     return (
       <div className="container">
         <Options />
+        <div className="container-fluid">
         {
         	this.state.products.map((product) => {
-        		return (<Card product={product} />)
+        		return (<Card key={product.id} product={product} />)
         	})
         }
-
+        </div>
       </div>
       
     )

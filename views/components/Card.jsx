@@ -4,17 +4,16 @@ const Card = (props) => {
   const product = props.product
 
   return (
-        <div>
-          <h2>{product.name}</h2>
-          <p>{product.cost}</p>
-          <p>{product.quantity} available </p>
-
-            <div className="w3-section">
-              <button >Save</button>
-              <button >Add to Cart</button>
-            </div>
-            <br />
-        </div>
+  <div className="col-sm-6 col-md-4">
+    <div className="thumbnail">
+      <img src={product.url} />
+      <div className="caption">
+        <h3>{product.name}</h3>
+        <p>${product.cost} | {product.quantity} available </p>
+        <p><a href="#" className="btn btn-primary" role="button">Add to Cart</a> </p>
+      </div>
+    </div>
+  </div>
   )
 }
 

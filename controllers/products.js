@@ -11,7 +11,8 @@ router.get('/', (req, res, next) => {
   //mustBeLoggedIn(req, res, next)
   Products.findAll({
     include: [{
-      model: Categories
+      model: Categories,
+      where: req.query
     }]
   }).then(products =>
     res.json(products)
