@@ -2,9 +2,8 @@ const express = require('express');
 const models = require('../models');
 const router = express.Router();
 const Categories = models.Categories;
-const Products = models.Categories;
-const CartDetail = models.CartDetails;
-const CatProds = models.CatProds;
+const Products = models.Products;
+
 
 router.post('/', (req,res) =>{
   //mustBeLoggedIn(req,res,next)
@@ -19,6 +18,7 @@ router.post('/', (req,res) =>{
   )
 })
 
+
 router.get('/', (req,res) =>{
   Categories.findAll()
     .then((allCategories) => res.json(allCategories))
@@ -28,10 +28,11 @@ router.get('/', (req,res) =>{
 })
 
 
+
 // Used to get a list of products based on a category
 
 router.get('/:id', (req, res) => {
-  CatProds.findAll({
+  models.CatProds.findAll({
     where: {
       CategoryId: req.params.id
     },
@@ -44,12 +45,12 @@ router.get('/:id', (req, res) => {
   })
   .then(products =>
     res.json(products)
+  ).catch(
+    console.error
   )
 })
 
 
-
-module.exports = router
 
 
 module.exports = router
