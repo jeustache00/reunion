@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "janizagesmundo",
-    "password": "Baruch52",
+    "username": "admin",
+    "password": "password",
     "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "test": {
-    "username": "janizag",
-    "password": "Baruch52",
+    "username": "admin",
+    "password": "password",
     "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
-    "username": "janizag",
-    "password": "Baruch52",
+    "username": "admin",
+    "password": "password",
     "database": "poll-development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
