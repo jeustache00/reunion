@@ -38,8 +38,9 @@ export default class Navigation extends React.Component {
 	          </div>
 	          <div id="top-links" className="nav pull-right flip">
 	            <ul>
-	              <li><a href="login.html">Login</a></li>
-	              <li><a href="register.html">Register</a></li>
+	              <li><Link to="/login">Login</Link></li>
+	              <li><Link to="/login">Register</Link></li>
+	              <li><Link to="/checkout">Checkout</Link></li>
 	            </ul>
 	          </div>
 	        </div>
@@ -54,7 +55,7 @@ export default class Navigation extends React.Component {
 	          </div>
 
 	          <div className="col-table-cell col-lg-6 col-md-6 col-sm-12 col-xs-12">
-	            <div id="logo"><a href="index.html"><img className="img-responsive" src="image/logo2.jpg" title="TRY2BUY" alt="TRY2BUY" /></a></div>
+	            <div id="logo"><a href="/"><img className="img-responsive" src="image/logo2.jpg" title="TRY2BUY" alt="TRY2BUY" /></a></div>
 	          </div>
 
 	          <div className="col-table-cell col-lg-3 col-md-3 col-sm-12 col-xs-12 inner">

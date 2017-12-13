@@ -6,10 +6,10 @@ const Card = (props) => {
   return (
   <div className="col-sm-6 col-md-4">
     <div className="thumbnail">
-      <img src={product.url} />
+      <img className="grid" src={product.url} />
       <div className="caption">
         <h3>{product.name}</h3>
-        <p>${product.cost} | {product.quantity} available </p>
+        <p>Price: ${product.cost} | {product.quantity} units available </p>
         <p><a href="#" className="btn btn-primary" role="button">Add to Cart</a> </p>
       </div>
     </div>

@@ -34,6 +34,11 @@ body {
 }
 body { font-size:12px; }
 label { font-weight:normal; }
+form {
+	padding:0;
+	margin:0;
+	display:inline;
+}
 img { vertical-align:inherit; }
 a {
 	color:#3e7cb4;
@@ -233,40 +238,6 @@ a:focus { outline:none; }
 /* Menu Center */
 #menu.center .navbar-nav{text-align: center;}
 #menu.center .nav > li{display: inline-block; float: none;}
-
-/*===================================================================================*/
-/*  GRID box
-/*===================================================================================*/
-
-.custom-grid-box .grid-box {
-	background:#f2f2f2;
-	width: 250px;
-	height: 250px;
-	text-align:center;
-	padding:10px;
-	margin-bottom:20px;
-	display: center;
-}
-
-.custom-grid-box .img {
-	width: auto;
-}
-
-.custom-grid-box .grid-box .title {
-	color:#000;
-	font-size:13px;
-	text-transform:uppercase;
-	line-height:normal;
-	margin:0;
-}
-.custom-grid-box .grid-box p {
-	color:#000;
-	font-size:12px;
-	margin:0;
-	line-height:normal;
-}
-
-
 
 /*===================================================================================*/
 /*  Feature box
