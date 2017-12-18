@@ -10,7 +10,7 @@ const Card = (props) => {
       <div className="caption">
         <h3>{product.name}</h3>
         <p>Price: ${product.cost} | {product.quantity} units available </p>
-        <p><a href="#" className="btn btn-primary" role="button">Add to Cart</a> </p>
+        <p><a href="/cart" className="btn btn-primary" role="button">Add to Cart</a> </p>
       </div>
     </div>
   </div>

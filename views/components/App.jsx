@@ -8,7 +8,7 @@ import Product from '../containers/Product'
 import Cart from '../containers/Cart'
 import Products from '../containers/Products'
 import Category from '../containers/Category'
-import Login from '../containers/Login'
+import Login from '../components/Login'
 import Checkout from '../containers/Checkout'
 
 const App = () => (

@@ -113,8 +113,8 @@ const Cart = (props) => {
           </div>
 
           <div className="buttons">
-            <div className="pull-left"><a href="index.html" className="btn btn-default">Continue Shopping</a></div>
-            <div className="pull-right"><a href="checkout.html" className="btn btn-primary">Checkout</a></div>
+            <div className="pull-left"><a href="/products" className="btn btn-default">Continue Shopping</a></div>
+            <div className="pull-right"><a href="/checkout" className="btn btn-primary">Checkout</a></div>
           </div>
         </div>
 
