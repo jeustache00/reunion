@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 const Card = (props) => {
   const product = props.product
@@ -18,3 +18,4 @@ const Card = (props) => {
 }
 
 module.exports = Card
+*/

@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import {Link} from 'react-router-dom'
 
 const ProductGrid = (props) => {
@@ -45,4 +45,6 @@ const ProductGrid = (props) => {
   )
 }
 
-module.exports = ProductGrid
+module.exports = ProductGrid*
+
+*/

@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const SignupModal = () => (
   <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -23,3 +23,4 @@ const SignupModal = () => (
 )
 
 module.exports = SignupModal
+*/

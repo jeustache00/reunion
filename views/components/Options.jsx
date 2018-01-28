@@ -10,20 +10,20 @@ const Options = (props) => {
           <div className="custom-feature-box row">
             <div className="col-sm-4 col-xs-6">
               <div className="feature-box fbox_1">
-                <div className="title">Try It</div>
-                <p>Sends you a free sample for 24 hours</p>
+                <div className="title">Send SMS</div>
+                <p>Instantly send a text to your family</p>
               </div>
             </div>
             <div className="col-sm-4 col-xs-6">
               <div className="feature-box fbox_2">
-                <div className="title">Rent It</div>
-                <p>Easy return in 2 days after purchasing</p>
+                <div className="title">Emergency Alerts</div>
+                <p>GPS tracking for safety</p>
               </div>
             </div>
           <div className="col-sm-4 col-xs-12">
               <div className="feature-box fbox_2">
-                <div className="title">Buy It</div>
-                <p>One click checkout available</p>
+                <div className="title">Safety First</div>
+                <p>One click panick button</p>
               </div>
             </div>
           </div>

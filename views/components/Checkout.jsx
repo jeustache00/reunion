@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Checkout = (props) => {
@@ -153,3 +153,4 @@ const Checkout = (props) => {
 }
 
 module.exports = Checkout
+*/

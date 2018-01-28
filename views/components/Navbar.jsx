@@ -30,8 +30,8 @@ export default class Navigation extends React.Component {
 	            <div className="links">
 	              <ul>
 	                <li className="mobile"><i className="fa fa-phone"></i>+123456789</li>
-	                <li className="email"><a href="mailto:info@marketshop.com"><i className="fa fa-envelope"></i>info@try2buy.com</a></li>
-	                <li className="mobile"><i className="fa fa-truck"></i> Free Shipping On Orders Over $50</li>
+	                <li className="email"><a href="mailto:info@marketshop.com"><i className="fa fa-envelope"></i>info@reunionapp.com</a></li>
+	                <li className="mobile"><i className="fa fa-phone"></i> Free Emergency SMS </li>
 
 	              </ul>
 	            </div>
@@ -39,14 +39,14 @@ export default class Navigation extends React.Component {
 	          <div id="top-links" className="nav pull-right flip">
 	            <ul>
 	              <li><Link to="/login">Login</Link></li>
-	              <li><Link to="/login">Register</Link></li>
-	              <li><Link to="/checkout">Checkout</Link></li>
+	              <li><Link to="/login">Account</Link></li>
+	              <li><Link to="/checkout">Info</Link></li>
 	            </ul>
 	          </div>
 	        </div>
 	      </div>
 	    </nav>
-	    
+
 	    <header className="header-row">
 	      <div className="container">
 	        <div className="table-container">
@@ -55,7 +55,7 @@ export default class Navigation extends React.Component {
 	          </div>
 
 	          <div className="col-table-cell col-lg-6 col-md-6 col-sm-12 col-xs-12">
-	            <div id="logo"><a href="/"><img className="img-responsive" src="image/logo2.jpg" title="TRY2BUY" alt="TRY2BUY" /></a></div>
+	            <div id="logo"><a href="/"><img className="img-responsive" src="/Users/julie/Desktop/reunion/public/image/logo.jpg" title="Logo" alt="Logo" /></a></div>
 	          </div>
 
 	          <div className="col-table-cell col-lg-3 col-md-3 col-sm-12 col-xs-12 inner">
@@ -74,19 +74,13 @@ export default class Navigation extends React.Component {
 	        <div className="collapse navbar-collapse navbar-ex1-collapse">
 	          <ul className="nav navbar-nav">
 
-	            <li><Link className="home_link" title="Home" to="/">Home</Link></li>
-	            { 
-			       this.state.categories.map(category => {
-			       	return (<li className="mega-menu dropdown" key={category.id}>
-			       		<Link to={{
-			       			pathname: '/products', 
-			       			state: {catId: category.id}
-			       		}} >{category.type}</Link>
-			       		</li>)
-			       })
-		  	    }
-		  	    
-	            <li className="mega-menu dropdown"><Link to="/cart">CART</Link></li>
+
+							<li><Link className="home_link" title="Home" to="/">Home</Link></li>
+							{
+
+							}
+
+	            <li className="mega-menu dropdown"><Link to="/cart">Info</Link></li>
 	          </ul>
 	        </div>
 	      </div>

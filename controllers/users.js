@@ -20,9 +20,9 @@ passport.deserializeUser(function(id, done){
   })
 })
 
-/*****************************
+/*
 NEED TO LOWERCASE ALL EMAILS
-*****************************/
+*/
 passport.use('local-signup', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
